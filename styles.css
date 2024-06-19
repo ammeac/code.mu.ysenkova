@@ -678,3 +678,712 @@ h2:only-of-type {
 .elem {
 	color:hotpink;
 }
+/*90*/
+#elem {
+	width: 300px;
+	height: 100px;
+	color: white;
+	background-color: orange;*
+}
+
+/*91
+
+#elem {
+	border-width: 3px;   
+	border-style: solid;  
+	border-color: red;   
+	width: 300px;
+	height: 100px;
+}
+
+92 сполшная 
+
+#elem {
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	width: 300px;
+	height: 100px;
+}
+
+93 точечная
+
+#elem {
+	border-width: 1px;
+	border-style: dotted;
+	border-color: black;
+	width: 300px;
+	height: 100px;
+}
+
+94 граница в виде тире
+
+#elem {
+	border-width: 1px;
+	border-style: dashed;
+	border-color: black;
+	width: 300px;
+	height: 100px;
+}
+ 
+95 выпуклая граница
+#elem {
+	border-width: 3px;
+	border-style: ridge;
+	border-color: black;
+	width: 300px;
+	height: 100px;
+}
+
+96 двойная граница
+#elem {
+	border-width: 5px;
+	border-style: double;
+	border-color: black;
+	width: 300px;
+	height: 100px;
+}
+
+97 свойства сокращения для границы
+#elem {
+	border: 1px solid red;
+	width: 300px;
+	height: 100px;
+}
+
+98 отдельные стороны границ
+лево
+#elem {
+	width: 300px;
+	height: 100px;
+	border-left: 1px solid red;
+}
+право и лево
+#elem {
+	width: 300px;
+	height: 100px;
+	border-left: 1px solid red;
+	border-right: 1px solid red;
+}
+	задание
+#elem {
+	width: 300px;
+	height: 100px;
+	border-left: 1px solid yellow;
+	border-right: 1px solid green;
+	border-bottom: 1px solid red;
+	border-top: 1px solid blue;
+}
+
+99 скругление границ
+
+#elem {
+	width: 300px;
+	height: 100px;
+	border: 1px solid red;
+	border-radius: 10px;
+}
+
+100 скругление границ фонв
+#elem {
+	border-radius: 20px;
+	width: 300px;
+	height: 100px;
+	background-color: #e4f1ed;
+}
+
+101 созд круга
+#elem {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	border: 1px solid green;
+}
+
+103 четыре занчение скругления для разных углов
+
+#elem {
+	width: 300px;
+	height: 100px;
+	border: 1px solid red;
+	border-radius: 10px 20px 30px 40px;
+}
+
+104 два значения скругления для разнфх углов
+Если задано два значения, 
+то первое значение задает скругление для для верхнего
+левого и нижнего правого, второе - верхнего правого
+и нижнего левого углов:
+#elem {
+	width: 300px;
+	height: 100px;
+	border: 1px solid red;
+	border-radius: 10px 40px;
+}
+
+105 три значения скругления для разных углов
+Если задано три значения,
+то первое значение задает скругление для
+верхнего левого угла, второе - одновременно 
+для верхнего правого и нижнего левого,
+а третье - для нижнего правого угла:
+#elem {
+	width: 300px;
+	height: 100px;
+	border: 1px solid red;
+	border-radius: 10px 20px 30px;
+}
+
+106 Скругленные уголки в процентах 
+
+#elem {
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+	border-radius: 10%;
+}
+
+107 Создание круга при скруглении в процентах 
+
+#elem {
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+	border-radius: 50%;
+}
+
+108
+
+#elem {
+	background-image: url("bg.png");
+	width: 400px;
+	height: 300px;
+	border: 3px solid black;
+}
+
+109
+№1
+#elem {
+	background-repeat: no-repeat;
+	background-image: url("bg.png");
+	width: 400px;
+	height: 300px;
+	border: 1px solid black;
+}
+
+№2
+#elem {
+	background-repeat: no-repeat;
+	background-image: url("bg.png");
+	width: 300px;
+	height: 500px;
+	border: 1px solid black;
+}
+*/ /*МАРКЕРЫ РАЗНЫЕ*/
+/*112
+
+ul {
+	list-style-type: square;
+}
+
+
+
+ul {
+	list-style-type: circle;
+}
+
+114*/
+
+ul {
+	list-style-type: disc;
+}
+
+/*115
+ul {
+	list-style-type: none;
+}
+*/
+/*117*/
+ol {
+	list-style-type: lower-roman;
+}
+/*118
+ol {
+	list-style-type: upper-roman;
+}
+лат буквы
+ol {
+	list-style-type: lower-alpha;
+}
+заглавные лат буквы
+ol {
+	list-style-type: upper-alpha;
+}
+строч греческие буквы
+ol {
+	list-style-type: lower-greek;
+}
+числа с нулем впереди для списков
+ol {
+	list-style-type: decimal-leading-zero;
+}
+	*/
+/*123*/
+	#parent {
+		width: 300px;
+		border: 1px solid red;
+	}
+	#child {
+		height: 100px;
+		border: 1px solid green;
+	}
+
+/*124 Отступы margin для раз сторон
+
+#parent {
+	width: 300px;
+	border: 1px solid red;
+}
+#child {
+	margin-top:    10px; /* сверху 
+	margin-right:  20px; /* справа 
+	margin-bottom: 30px; /* снизу 
+	margin-left:   40px; /* слева 
+	
+	height: 100px;
+	border: 1px solid green;
+}
+*/
+
+/*126 етыре значения в свойстве margin 
+
+#parent {
+	width: 300px;
+	border: 1px solid red;
+}
+#child {
+	height: 100px;
+	border: 1px solid green;
+	margin: 10px 20px 30px 40px;
+}
+	*/
+
+	/*127 Два значения в свойстве margin
+
+	#parent {
+		width: 300px;
+		border: 1px solid red;
+	}
+	
+	#child {
+		height: 100px;
+		border: 1px solid green;
+		margin: 40px 20px;
+	}
+*/
+
+/*128 Три значения в свойстве margin
+
+#parent {
+	width: 300px;
+	border: 1px solid red;
+}
+
+#child {
+	height: 100px;
+	border: 1px solid green;
+	margin: 10px 20px 30px;
+}
+	*/
+
+/*129 Работа с отступами padding и для задания 131*/
+
+#elem {
+	width: 300px;
+	border: 1px solid red;
+	text-align: justify;
+}
+
+/* теперь заданим 30 пикселей для всех стрн
+ #elem {
+	padding: 30px;
+	width: 300px;
+	border: 1px solid red;
+	text-align: justify;
+} */
+
+/*130 Отступы padding для разных сторон
+
+#elem {
+	padding-top:    10px; /* сверху 
+	padding-right:  20px; /* справа 
+	padding-bottom: 30px; /* снизу 
+	padding-left:   40px; /* слева 
+	
+	width: 300px;
+	border: 1px solid red;
+	text-align: justify;
+}
+*/
+
+/* 132 Работа с отступами padding 
+
+#elem1 {
+	width: 100px;
+	height: 100px;
+	background: #f1f1f1;
+	margin-bottom: 20px;
+}
+
+#elem2 {
+	padding: 25px;  задаем отступы 
+	width: 100px;
+	height: 100px;
+	background: #f1f1f1;
+}
+
+/*133 Влияние границы на расширение элементов*/
+
+#elem1 {
+	width: 100px;
+	height: 100px;
+	background: #f1f1f1;
+	margin-bottom: 20px;
+}
+
+#elem2 {
+	width: 100px;
+	height: 100px;
+	background: #f1f1f1;
+	border: 10px solid green;  /* задаем границу */
+}
+
+/*Влияние padding и границы на расширение элементов*/
+
+#elem1 {
+	width: 100px;
+	height: 100px;
+	background: #f1f1f1;
+	margin-bottom: 20px;
+}
+
+#elem2 {
+	width: 100px;
+	height: 100px;
+	background: #f1f1f1;
+	padding: 25px; /* задаем отступы */
+	border: 10px solid green;  /* задаем границу */
+}
+
+/*135 Отмена расширения элементов
+
+#elem1 {
+	width: 100px;
+	height: 100px;
+	background: #f1f1f1;
+	margin-bottom: 20px;
+}
+
+#elem2 {
+	width: 100px;
+	height: 100px;
+	background: #f1f1f1;
+	padding: 25px; /* задаем отступы 
+	border: 10px solid green;  /* задаем границу 
+	box-sizing: border-box;  /* убираем расширение 
+}
+	*/
+
+/*137 Ширина и высота блочного элемента 
+
+div {
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+}
+
+138 Если у блочного элемента не задана ширина,
+то он автоматически займет по ширине
+все доступное пространство:
+
+div {
+	height: 100px;
+	border: 1px solid red;
+}
+
+139 Высота блочного элемента
+Если у блочного элемента не задана высота,
+то его высота сформируется содержимым:
+
+div {
+	width: 100px;
+	border: 1px solid red;
+}
+
+140 Высота блочного элемента без содержимого
+Если содержимого в блочном элементе нет,
+то мы увидим слипшуюся границу:
+div {
+	width: 100px;
+	border: 1px solid red;
+}
+
+141 Несколько блочных элементов рядом
+в столбик
+div {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	border: 1px solid red;
+}
+
+143 Ширина и высота строчного элемента ДЛЯ SPAN
+Ширина и высота строчного элемента всегда
+ограничены его текстом.
+Даже если задать свойства width и height
+ для строчного элемента они не сработают:
+
+ span {
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+}
+
+144 Несколько строчных элементов рядом
+
+Если расположить несколько строчных элементов рядом,
+то они выстроятся в ряд:
+
+span {
+	border: 1px solid red;
+}
+
+145 Отступы между строчными элементами
+Эти отступы представляют собой
+банальные пробелы между словами текста.
+Убедится в этом можно,
+если в HTML коде написать эти теги без пробелов:
+
+span {
+	border: 1px solid red;
+}
+
+147  Работа со свойством display 
+можно сменить модель с помощью свойства display.
+С помощью значения block данного свойства элемент
+можно сделать блочным,
+а с помощью значения inline - строчным.
+
+Давайте сделаем так, чтобы теги span вели себя как
+блочные элементы:
+span {
+	display: block;
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+	margin-bottom: 20px;
+}
+
+ а теперь div как строчные:
+
+ div {
+	display: inline;
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+}
+
+149 Ширина и высота строчно-блочного элемента
+Строчно-блочного элементу можно задать ширину
+и высоту, подобно блочным элементам:
+
+span {
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+	display: inline-block;
+}
+
+150 Ширина строчно-блочного элемента
+
+Если у строчно-блочного элемента не задана ширина,
+то его ширина сформируется содержимым,
+подобно строчным элементам:
+
+span {
+	height: 100px;
+	border: 1px solid red;
+	display: inline-block;
+}
+
+151 Высота строчно-блочного элемента
+Если у строчно-блочного элемента не задана высота,
+то его высота сформируется
+содержимым, подобно строчным элементам:
+
+span {
+	width: 100px;
+	border: 1px solid red;
+	display: inline-block;
+}
+
+152
+
+Несколько строчно-блочных элементов рядом
+Если расположить несколько строчно-блочных
+элементов рядом,
+то они выстроятся в ряд, подобно строчным элементам:
+
+span {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	border: 1px solid red;
+	display: inline-block;
+}
+	задание
+div {
+
+	margin-bottom: 20px;
+	border: 1px solid red;
+	display: inline;
+	width: 100px;
+	height: 100px;
+}
+
+153
+Выравнивание блочных элементов
+Свойство margin применяется не только для
+задания отступов, но и для центрирования блочных
+элементов. Для этого правый и левый отступ следует
+задать в значение auto.
+
+В примере ниже внутренний блок станет по центру:
+
+.parent {
+	border: 1px solid red;
+}
+
+.child {
+	height: 100px;
+	width: 200px;
+	border: 1px solid green;
+	margin: 10px auto;
+}
+
+Если нам нужны разные верхний и нижний отступ margin,
+то можно написать вот так:
+
+.child {
+	margin: 30px auto 10px auto;
+}
+
+Можно переписать и через три значения: первое задаст
+верхний отступ, третье - нижний, а второе задаст
+значение auto для правого и левого отступов:
+
+.child {
+	margin: 30px auto 10px;
+}
+
+задание
+
+.parent {
+	border: 1px solid red;
+}
+
+.child {
+	margin: 30px auto 10px;
+}
+
+.child2 {
+	margin: 40px auto 10px;
+}
+
+.child3 {
+	margin: 50px auto 10px;
+}
+
+154 Выравнивание блочного элемента с отступом слева
+Можно, однако, поставить только левый отступ.
+В этом случае элемент получит максимально возможный
+отступ слева и займет крайнее правое положение:
+.parent {
+	padding: 10px 0;
+	border: 1px solid red;
+}
+.child {
+	margin-left: auto; задаем автоматический левый отступ
+		height: 100px;
+		width: 200px;
+		border: 1px solid green;
+	}
+
+155 Выравнивание блочного элемента с отступом справа
+.parent {
+	padding: 10px 0;
+	border: 1px solid red;
+}
+.child {
+	margin-left: auto;
+	margin-right: 20px; задаем правый отступ 
+		height: 100px;
+		width: 200px;
+		border: 1px solid green;
+	}
+
+157 Центрирование строчных элементов
+текст в границе, в границе
+.parent {
+	text-align: center;
+	padding: 10px 0;
+	border: 1px solid red;
+}
+.child {
+	border: 1px solid green;
+}
+
+158 Центрирование нескольких строчных элементов
+текст в блоке, несколько в строку, в общем блоке
+.parent {
+	text-align: center;
+	padding: 10px 0;
+	border: 1px solid red;
+}
+.child {
+	border: 1px solid green;
+}
+
+задание
+
+.parent {
+	padding: 10px 0;
+	border: 1px solid red;
+}
+
+.child {
+	border: 1px solid red;
+}
+
+159 Выравнивание строчных элементов по правому краю
+текст в блоке по правому краю, в границах
+.parent {
+	text-align: right;
+	padding: 10px 0;
+	border: 1px solid red;
+}
+.child {
+	border: 1px solid green;
+}
+
+задание
+
+.parent {
+text-align: right;
+	padding-right: 10px;
+	border: 1px solid red;
+}
+.child {
+	border: 1px solid green;
+}
+161 Центрирование строчно-блочных элементов
