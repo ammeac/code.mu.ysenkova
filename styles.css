@@ -1387,3 +1387,223 @@ text-align: right;
 	border: 1px solid green;
 }
 161 Центрирование строчно-блочных элементов
+
+.parent {
+  padding: 10px 0;
+  border: 1px solid red;
+  text-align: center;  Центрирование по горизонтали 
+}
+
+.child {
+  display: inline-block;  Преобразование в строчно-блочный элемент 
+  padding: 10px;
+  border: 1px solid green;
+  margin: 0 5px; Горизонтальный margin в 5px 
+}
+
+
+162 Выравнивание строчно-блочных
+элементов по правому краю
+
+.parent {
+	text-align: center;
+	padding: 10px 0;
+	border: 1px solid red;
+}
+.child {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 1px solid green;
+}
+
+163 Флекс элементы
+
+Флекс элементы, подобно блочным
+могут иметь ширину и высоту, margin и padding.
+Однако, в отличие от блочных,
+по умолчанию флекс элементы выстраиваются
+в ряд внутри своего родителя.
+
+.parent {
+	display: flex;  потомки будут флекс 
+		элементами 
+		width: 300px;
+		height: 200px;
+		border: 1px solid red;
+	}
+	.child {
+		width: 50px;
+		height: 50px;
+		border: 1px solid green;
+	}
+
+164 Высота родителя флекс элементов
+Если родителю флекс элементов не задана высота,
+то по высоте он будет растягиваться своим
+содержимым, то есть высотой потомков:
+
+.parent {
+	display: flex;
+	width: 300px;
+	border: 1px solid red;
+}
+.child {
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+}
+
+165 Ширина родителя флекс элементов
+Если родителю флекс элементов не задана ширина,
+то по ширине он займет все доступное место:
+
+.parent	{
+	display: flex;
+	border: 1px solid red;
+}
+.child {
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+}
+
+166 Строчно-блочный родитель флекс элементов 
+
+Вместо значения flex для свойства display родителю
+можно поставить значение inline-flex.
+В этом случае этот родитель будет вести себя,
+как строчно-блочный элемент.
+
+.parent	{
+	display: inline-flex;
+	border: 1px solid red;
+}
+.child {
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+}
+
+167 Отступы padding родителя флекс элементов
+
+.parent	{
+	display: inline-flex;
+	padding: 10px;
+	border: 1px solid red;
+}
+.child {
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+}
+
+168 Отступы margin потомкам
+
+.parent	{
+	display: inline-flex;
+	border: 1px solid red;
+}
+.child {
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+}
+
+170 Выравнивание флекс элементов по центру
+
+Значение center, установленное в свойстве
+justify-content, позволяет выровнять элементы
+по центру:
+
+.parent {
+	display: flex;
+	justify-content: center;
+}
+
+171 Выравнивание флекс элементов по родителю
+
+Значение space-between, заданное в свойстве
+justify-content, позволяет равномерно распределить
+элементы по родителю. При этом расстояние между
+ними рассчитывается автоматически.
+Первый элемент будет прижат к левому краю,
+а последний - к правому.
+
+.parent {
+	display: flex;
+	justify-content: space-between;
+}
+
+172 Выравнивание флекс элементов по родителю с отступами 
+
+Значение space-around в свойстве justify-content
+задает первому и последнему флекс элементам отступ
+от края родителя.
+
+С первого взгляда может показаться,
+что расстояние между элементами и между крайними
+элементами и родителем будут равны, однако, это не
+так - расстояние между элементами будет в 2 раза
+больше, чем между родителем и крайним элементом.
+
+.parent {
+	display: flex;
+	justify-content: space-around;
+}
+
+173 Выравнивание флекс элементов
+по родителю с равными отступами
+
+Поведение значения space-around чаще всего не то,
+которое вам хотелось бы.
+Чаще всего нам нужно сделать так,
+чтобы все указанные промежутки были равны.
+
+Для этого придумано значение space-evenly,
+которое и сделает то, что нам нужно
+
+.parent	{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+174 Абсолютное позиционирование элементов
+
+№практические
+1
+
+2
+
+3
+
+4
+
+175 Относительное позиционирование элементов
+
+#elem1 {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	background-color: #FF8888;
+}
+#elem2 {
+position: relative;
+	top: -40px;
+	left: 20px;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	background-color: #7E89EB;
+}
+#elem3 {
+position: relative;
+	top: -60px;
+	left: 40px;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	background-color: #4DEE99;
+}
+
+176 Позиционирование относительно родителя
