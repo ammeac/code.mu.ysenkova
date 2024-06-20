@@ -1607,3 +1607,624 @@ position: relative;
 }
 
 176 Позиционирование относительно родителя
+
+#parent {
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+#child {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	
+	width: 100px;
+	height: 100px;
+	border: 1px solid green;
+}
+
+#child {
+	position: absolute;
+	top: 40px;
+	left: 60px;
+	
+	width: 100px;
+	height: 100px;
+	border: 1px solid green;
+}
+
+177 Позиционирование относительно абсолютного родителя
+#parent {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	
+	width: 500px;
+	height: 300px;
+	border: 1px solid red;
+}
+#child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 200px;
+	height: 200px;
+	border: 1px solid green;
+}
+
+178 Абсолютное позиционирование без координат 
+#elem1 {
+	width: 200px;
+	height: 150px;
+	border: 1px solid red;
+}
+#elem2 {
+	position: absolute;
+	left: 40px;  добавляем 
+		позицию по горизонтали 
+	
+		width: 100px;
+		height: 100px;
+		margin-left: 10px;
+		border: 1px solid green;
+	}
+	#elem3 {
+		width: 50px;
+		height: 150px;
+		border: 1px solid blue;
+
+#elem1 {
+	width: 200px;
+	height: 150px;
+	border: 1px solid red;
+}
+#elem2 {
+	position: absolute;
+	top: 100px;  добавляем 
+		позицию по вертикали 
+	
+		width: 100px;
+		height: 100px;
+		margin-left: 10px;
+		border: 1px solid green;
+	}
+	#elem3 {
+		width: 50px;
+		height: 150px;
+		border: 1px solid blue;
+	}
+
+	179 Центрирование через абсолют
+
+	#elem {
+	position: absolute;
+	top:    30px;
+	right:  30px;
+	bottom: 30px;
+	left:   30px;
+	
+	border: 1px solid green;
+}
+	#elem2 {
+	border: 1px solid red;
+	position: absolute;
+	top:    100px;
+	right:  200px;
+	bottom: 50px;
+	left:   10px;
+
+180 Отрицательные значения при позиционировании
+
+#parent {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 50px auto;
+	border: 1px solid red;
+}
+#child {
+	position: absolute;
+	top: -50px;
+	left: -60px;
+	
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+}
+
+#child {
+	position: absolute;
+	top: 50px;
+	left: 60px;
+	
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+}
+
+181 Фиксированное позиционирование
+
+#elem {
+	position: fixed; задаем фиксированное позиционирование 
+		*
+		top: 30px;
+		right: 30px;
+		width: 100px;
+		height: 100px;
+		border: 1px solid green;
+	}
+	
+	#content {
+		margin: 0 auto;
+		width: 300px;
+		text-align: justify;
+		font: 16px Arial;
+	}
+182
+Блок на всю ширину экрана
+Чтобы фиксированный блок занял всю ширину экрана,
+ему нужно задать ширину 100%
+
+#elem {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	border: 1px solid green;
+	background: green;
+}
+
+#content {
+	margin: 0 auto;
+	width: 300px;
+	text-align: justify;
+}
+
+183 Регулирование наложения элементов по оси Z
+Порядок наложения элементов можно регулировать с
+ помощью свойства z-index, принимающего своим
+ значением целые положительные или отрицательные числа,
+ либо ноль. Свойство работает только для элементов,
+ у которых значение position задано как absolute,
+ fixed или relative.
+
+При использовании данного свойства правило
+наложения элементов следующее: выше будет тот
+элемент, у которого значение z-index больше.
+
+Давайте поменяем порядок наложения элементов
+из предыдущего примера. Для этого первому
+элементу поставим z-index больше, чем у второго,
+например, вот так:
+#elem1 {
+	z-index: 2;
+}
+#elem2 {
+	z-index: 1;
+}
+
+№1
+#elem1 {
+	z-index: 1;
+}
+#elem2 {
+	z-index: 2;
+}
+#elem3 {
+z-index: 3;
+}
+№2
+#elem1 {
+	z-index: 2;
+}
+#elem2 {
+	z-index: 1;
+}
+#elem3 {
+z-index: 3;
+}
+
+185 Нюансы применения отрицательного значения z-index
+Если z-index у элемента не задан, то его значение следует
+трактовать как 0. Это значит, что элемент со значением
+z-index, равным -1, будет ниже элемента без z-index.
+
+Можно переделать пример с нашими двумя элементами
+следующим образом: просто задать второму элементу
+z-index в значение -1, и он станет под первый элемент:
+
+#elem1 {
+	 не задаем z-index 
+}
+#elem2 {
+	z-index: -1;
+}
+
+#1
+
+#elem1 {
+	z-index: -1;
+}
+#elem2 {
+	
+}
+#elem3 {
+	z-index: -1;
+}
+
+186 Введение в свойство float
+
+Пусть у нас есть див с каким-то длинным текстом.
+Давайте вставим в начало этого текста картинку:
+
+div {
+	width: 400px;
+	text-align: left;
+}
+
+div {
+	width: 400px;
+	text-align: justify;
+}
+img {
+	float: right;
+}
+
+187 Проникновение плавающих элементов через теги
+Пусть теперь у нас текст размещен в абзацах,
+а картинка, которой задано свойство float находится
+над этими абзацами. В этом случае все будет
+работать, как и работало - наличие других тегов
+не мешает обтеканию:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+img {
+	float: left;
+}
+
+188 Сочетание float и margin
+Сейчас наш текст прижат к картинке
+с левой стороны. Давайте попробуем
+немного отодвинуть этот текст.
+Для этого зададим нашим абзацам левый
+margin в 30px, а диву-родителю - красную границу.
+
+Неожиданно вправо отступит тольк
+тот текст, который прилегает
+в диву-родителю, а текст,
+прилегающий к картинке - не отодвинется:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+}
+img {
+	float: left;
+}
+
+Чтобы понять, почему это так,
+добавим абзацам зеленую границу:
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+}
+
+Как мы видим, на самом деле абзацы
+отодвигаются от левого края, но не от
+картинки, а от дива-родителя. Чтобы
+рассмотреть подробнее, давайте
+добавим еще и полупрозначность
+картинке через свойство opacity:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	opacity: 0.5;
+}
+
+Вот теперь точно видно, что реакция
+на margin-left есть, только абзацы 
+на самом деле размещены под картинкой.
+Давайте уберем отступ, оставив при этом
+полупрозрачность картинке:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: left;
+	opacity: 0.5;
+}
+
+Вот так на самом деле выглядят наши абзацы
+ их текст отодвинут картинкой, но физически
+ абзацы лежат под картинкой, это видно по
+ границе, которая начинается от левого края
+ дива-родителя.
+
+Давайте вернем margin и засунем картинку в
+первый абзац:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	opacity: 0.5;
+}
+
+189 Сочетание float и padding
+Давайте опять поставим картинку
+над абзацами, оставив им при этом левый padding.
+В этом случае padding отодвинет только тот текст,
+который прилегает слева к диву-родителю,
+а не к нашей картинке:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	padding-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	opacity: 0.5;
+}
+
+А теперь положим картинку в первый абзац 
+она будет двигаться вправо вместе с текстом абзацев:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	padding-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	opacity: 0.5;
+}
+
+190 Отступы для картинки при сочетании float и padding 
+Давайте добавим правый margin 
+в этом случае текст действительно отодвинется
+от правого края картинки:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: left;
+	margin-right: 30px;
+	opacity: 0.5;
+}
+
+Интересный эффект получится,
+если добавить еще и margin абзацам
+сами абзацы отодвинутся от левого края
+дива-родителя, при этом текст в них
+по-прежнему будет отодвинут от правого
+края картинки, так как ей задан правый margin:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	margin-right: 30px;
+	opacity: 0.5;
+}
+
+191 Отступы плавающему элементу
+
+Давайте добавим правый margin
+ в этом случае текст действительно
+ отодвинется от правого края картинки:
+
+ div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: left;
+	margin-right: 30px;
+	opacity: 0.5;
+}
+
+Интересный эффект получится,
+если добавить еще и margin абзацам
+сами абзацы отодвинутся от левого
+края дива-родителя, при этом текст
+в них по-прежнему будет отодвинут
+от правого края картинки, так как ей задан
+правый margin:
+
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	margin-right: 30px;
+	opacity: 0.5;
+}
+
+//задание//
+
+div {
+	width: 400px;
+	text-align: left;
+}
+
+img {
+	float: left;
+	margin-right: 30px;
+}
+img {
+	float:right;
+	margin-right: 30px;
+}
+
+192 Плавающие элементы под тегами
+Пусть сейчас у нас есть два абзаца и картинка,
+размещенная в первом абзаце. Пусть этой картинке
+у нас задано свойство float в значении right,
+а также полупрозрачность:
+
+div {
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: right;
+	opacity: 0.5;
+}
+
+А теперь давайте поставим в HTML коде картинку
+после первого абзаца и посмотрим, что будет:
+
+div {
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: right;
+	opacity: 0.5;
+}
+Давайте вообще переставим нашу картинку
+после второго абзаца. В этом случае она будет
+плавать справа, но никакого обтекания не будет:
+
+div {
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: right;
+	opacity: 0.5;
+}
+
+193 Действие флоатов на родителя
+
+Пусть теперь у нас есть див,
+в котором лежит картинка. Диву зададим границу,
+а картинке пока не будем задавать свойство float.
+
+div {
+	border: 1px solid red;
+}
+
+Теперь давайте установим картинке свойство float
+в значении left. В этом случае произойдет удивительная
+вещь - высота родителя исчезнет, его нижняя граница
+будет начинаться сразу после верхней,
+а картинка вылезет снизу за своего родителя:
+
+div {
+	border: 1px solid red;
+}
+img {
+	float: left;
+}
+
+Давайте свойству float вместо left напишем значение
+right. Поведение родителя не изменится,
+но картинка начнет плавать справа:
+
+div {
+	border: 1px solid red;
+}
+img {
+	float: right;
+}
+
+194 Высота родителя флоатов
+Хотя плавающие элементы не расширяют своего
+родителя по высоте, мы можем сами задать ему
+высоту с помощью свойства height. Сделаем это:
+
+div {
+	height: 100px;
+	border: 1px solid red;
+}
+img {
+	float: right;
+}
+
+195 Текст в родителе флоатов
